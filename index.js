@@ -3,20 +3,44 @@ function JumpTo(id) {
     jumpto.scrollIntoView({ block: 'start' , behavior: 'smooth' });
 }
 
-function reveal(){
-    var reveals = document.querySelectorAll(".celebrate-section,#lookforward,.countdown-area-box>div,.video-area,.dress-code>p,.color-box,.timeline,.map,.traffic-guide,.invite-content,.invite-pic,.intro-content,.pic,.time,.celebrate-section p,.celebrate-section h2,.schedule h2,.schedule-box,.dresscode-box")
-    for (var i = 0; i < reveals.length; i++){
+function reveal() {
+    var reveals = document.querySelectorAll(".celebrate-section,#lookforward,.countdown-area-box>div,.video-area,.dress-code>p,.color-box,.timeline,.map,.traffic-guide,.invite-content,.invite-pic,.intro-content,.pic,.time,.celebrate-section p,.celebrate-section h2,.schedule h2,.schedule-box,.dresscode-box");
+    for (var i = 0; i < reveals.length; i++) {
         var windowHeight = window.innerHeight;
         var elementTop = reveals[i].getBoundingClientRect().top;
         var elementVisible = 150;
         if (elementTop < windowHeight - elementVisible) {
-            reveals[i].classList.add("active");
+            if (!reveals[i].classList.contains("active")) {
+                reveals[i].classList.add("active");
+            }
         } else {
-            reveals[i].classList.remove("active");
+            if (reveals[i].classList.contains("active")) {
+                reveals[i].classList.remove("active");
+            }
         }
     }
 }
-window.addEventListener("scroll",reveal)
+window.addEventListener("scroll", reveal);
+
+
+function debounce(func, wait = 20, immediate = true) {
+    let timeout;
+    return function () {
+        let context = this, args = arguments;
+        let later = function () {
+            timeout = null;
+            if (!immediate) func.apply(context, args);
+        };
+        let callNow = immediate && !timeout;
+        clearTimeout(timeout);
+        timeout = setTimeout(later, wait);
+        if (callNow) func.apply(context, args);
+    };
+}
+
+window.addEventListener("scroll", debounce(reveal));
+
+
 
 
 function showgallery(id){
