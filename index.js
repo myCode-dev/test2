@@ -7,7 +7,7 @@ function JumpTo(id) {
 
 // 元素显现效果
 function reveal() {
-  var reveals = document.querySelectorAll("#lookforward,.countdown-area-box>div,.video-area,.dresscode-box,.color-box,.timeline,.map,.traffic,.traffic-content,.traffic-guide,.invite-content,.invite-pic,.intro-content,.groom .pic,.bride .pic,.celebrate-section p,.celebrate-section h2")
+  var reveals = document.querySelectorAll("#lookforward,.countdown-area-box>div,.video-area,.dresscode-box,.color-box,.timeline,.map,.traffic,.traffic-content,.traffic-guide,.invite-content,.invite-pic,.intro-content,.celebrate-section p,.celebrate-section h2")
   console.log(reveals)
   for (var i = 0; i < reveals.length; i++) {
       var windowHeight = window.innerHeight;

@@ -144,7 +144,7 @@ p {
     max-width: 300px;
     aspect-ratio: 1 / 1.5;
     background-repeat: no-repeat;
-    opacity: 0;
+    /* opacity: 0; */
 }
 
 .groom .pic {
@@ -161,7 +161,7 @@ p {
     margin-left: 50px;
 }
 
-.groom .pic.active {
+/* .groom .pic.active {
     opacity: 1;
     transition: 2s;
 }
@@ -169,7 +169,7 @@ p {
 .bride .pic.active {
     opacity: 1;
     transition: 2s;
-}
+} */
 
 .groom .intro-text {
     color: rgb(255, 255, 255);
