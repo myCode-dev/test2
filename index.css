@@ -147,11 +147,6 @@ p {
     opacity: 0;
 }
 
-.pic.active {
-    opacity: 1;
-    transition: 2s;
-}
-
 .groom .pic {
     background-image: url('groom.webp');
     background-size: 120%;
@@ -164,6 +159,16 @@ p {
     background-size: 105%;
     background-position: 55% 50%;
     margin-left: 50px;
+}
+
+.groom .pic.active {
+    opacity: 1;
+    transition: 2s;
+}
+
+.bride .pic.active {
+    opacity: 1;
+    transition: 2s;
 }
 
 .groom .intro-text {
