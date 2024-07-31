@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html>
 <head>
     <title>BIN & RU | Wedding Invitation</title>
@@ -7,94 +8,89 @@
     <meta property="og:description" content="Save the Date for the wedding of Bin and RU!">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="robots" content="noindex,nofollow">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="index.css">
+    <script src="index.js"></script>
     <script src="https://kit.fontawesome.com/5d0e563f35.js" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
 </head>
 
-<body>
-    <div class="celebrate-section" id="header">
+<body>    
+    <div class="celebrate-section">
         <div class="celebrate-pic"></div>
         <div class="celebrate-text-box">
-            <div class="celebrate-text">OUR ROAD STARTS HERE !</div>
+            <div class="celebrate-text">OUR ROAD STARTS HERE!</div>
         </div>
     </div>
 
     <div class="intro">
         <div class="intro-box groom">
-            <div class="pic active"></div>
+            <div class="pic"></div>
             <div class="intro-text">GROOM</div>
         </div>
-        <br>
-        <br>
-        <br>
-        <br>
         <div class="name-box">
             <h2>蕭文彬</h2>
-            <span class="theX">♡</span>
+            <span class="theX">×</span>
             <h2>廖婕如</h2>
         </div>
         <div class="intro-box bride">
-            <div class="pic active"></div>
+            <div class="pic"></div>
             <div class="intro-text">BRIDE</div>
         </div>
     </div>
 
     <div class="invite">
-        <div class="invite-pic active">
-            <div id="invite-pic1"></div>
-            <div id="invite-pic2"></div>
-            <div id="invite-pic3"></div>
-        </div>
-        <div class="invite-content active">
-            <h2 style="margin-top: 10px;">一起慶祝吧!</h2>
-            <p>2024年10月26日（六）</p>
-            <p style="margin-left: 18px;">邀請您於此日與我們一同慶祝</p>
-            <h2 class="special">如何抵達?</h2>
-            <div style="margin-bottom: 30px;">
-                <p><i class="fa-solid fa-location-dot" aria-hidden="true"></i>陽明山美軍俱樂部</p>
-                <p><a class="map-address" href="https://maps.app.goo.gl/wf1Gi5U4RBSmEZDp7">台北市士林區凱旋路49號</a></p>
-            </div> 
-            <div style="margin-bottom: 20px;">
-                <p><i class="fa-solid fa-train-subway" aria-hidden="true"></i>公共交通</p>
-                <p>捷運士林/劍潭站可搭乘紅5/260於山仔后派出所下車</p>
+        <div class="invite-box">
+            <h1>Let's Celebrate</h1>
+            <div class="invite-pic" id="invite-pic1">
+                <div class="invite-pic-hide" id="invite-pic1-2" style="display: none;"></div>
             </div>
-            <div style="margin-bottom: 20px;">
-                <p><i class="fa-solid fa-car-rear" aria-hidden="true"></i>自行駕車</p>
-                <p>可將車輛停至美軍俱樂部/草山小鎮停車場</p>
+            <div class="invite-content active">
+                2024.10.26 SAT.<br>
+                邀請您們前往美軍俱樂部 <br>
+                與我們一同慶祝！
+            </div>
+            <div class="invite-pic" id="invite-pic2">
+                <div class="invite-pic-hide" id="invite-pic2-2" style="display: none;"></div>
             </div>
         </div>
     </div>
 
-    <div class="schedule active">
-        <div style="display: flex; justify-content: center; width: 100%; margin-bottom: 180px;">
-            <h2>Timeline</h2>
+    <div class="traffic active">
+        <div class="traffic-guide-box">
+            <div class="traffic-guide">
+                <h1><i class="fa-solid fa-location-dot"></i>美軍俱樂部</h1>
+                <p class="venue-address" onclick="openGoogleMap()">台北市士林區凱旋路49號</p>
+                <br>
+                <br>
+                <div class="traffic-content">
+                    <div><i class="fa-solid fa-train" aria-hidden="true"></i></div>
+                    <div>公車<br>至捷運士林/劍潭站搭乘紅5/260，於山仔后派出所下車</div>
+                    <div><i class="fa-solid fa-car-rear" aria-hidden="true"></i></div>
+                    <div>開車<br>可將車輛停至美軍俱樂部/草山小鎮停車場</div>
+                </div>
+            </div>
         </div>
-        <div class="schedule-box active">
-            <div class="">
-                <p class="time test1">10:30AM</p>
-                <p class="activity test1">證婚</p>
-            </div>
-            <span class="timeline" id="timeline1"><span></span></span>
-            <div class="">
-                <p class="time test2">11:00PAM</p>
-                <p class="activity test2">合照</p>
-            </div>
-            <span class="timeline" id="timeline2"><span></span></span>
-            <div class="">
-                <p class="time test3">12:00PM</p>
-                <p class="activity test3">午宴</p>
-            </div class="test1">
-            <span class="timeline" id="timeline3"><span></span></span>
-            <div class="">
-                <p class="time test4">14:00PM</p>
-                <p class="activity test4">二進</p>
-            </div>
-            <span class="timeline" id="timeline4"><span></span></span>
-            <div>
-                <p class="time test5">15:30PM</p>
-                <p class="activity test5">送客</p>
-            </div>
+    </div>
+
+    <div class="schedule">
+        <h1>Timeline</h1>
+        <div class="timeline active">
+            <div class="time">04:30<span>PM</span></div>
+            <div class="dot"></div>
+            <div class="activity">Ceremony</div>
+            <div class="time">05:00<span>PM</span></div>
+            <div class="dot"></div>
+            <div class="activity">Photo</div>
+            <div class="time">06:00<span>PM</span></div>
+            <div class="dot"></div>
+            <div class="activity">Dinner</div>
+            <div class="time">07:00<span>PM</span></div>
+            <div class="dot"></div>
+            <div class="activity">First Dance</div>
+            <div class="time">07:30<span>PM</span></div>
+            <div class="dot"></div>
+            <div class="activity">PARTY!</div>
+            <div class="hope"><i>hope you enjoy the wedding</i></div>
         </div>
     </div>
 
@@ -119,15 +115,13 @@
         </div>
     </div>
 
-    <!-- -->
-
-    <div class="photo-video" style="position: relative;">
-        <div class="photo-area" style="position: relative;">
-            <div class="heart" style="position: absolute; top:-60px; z-index: 2;">
-                <div style="position: absolute; top:2px; left: 15px; z-index: 3; color: #fff; font-size: 1.5em;">婚</div>
+    <div class="photo-video">
+        <div class="photo-area">
+            <div class="heart heart-left">
+                <div>婚</div>
             </div>
-            <div class="heart" style="position: absolute; top:-60px; left: 50px; z-index: 2;">
-                <div style="position: absolute; top:2px; left: 15px; z-index: 3; color: #fff; font-size: 1.5em;">紗</div>
+            <div class="heart heart-right">
+                <div>紗</div>
             </div>
             <div class="slider-box">
                 <div class="slider">
@@ -147,43 +141,7 @@
                 </div>
             </div>
         </div>
-        <!-- <div style="position: absolute; top: 580; right: 10; font-size: 1.8vh; width: 200px; height: 40px; padding:10px; display: flex; justify-content: center; align-items: center;">
-            <a href="javascript:void(0)" onclick="showgallery('photo-gallery')">MORE PHOTO →</a>
-        </div> -->
     </div>
-
-    <!-- <a href="javascript:void(0)" id="closebutton" onclick="closegallery()">×</a>
-    <div id="gallery">
-        <div id="photo-gallery">
-            <div>
-                <div class="photo-gallery-box">
-                    <img src="/images/gallery1.webp" alt="engagement photo">
-                    <img src="/images/gallery2.webp" alt="engagement photo1">
-                    <img src="/images/gallery3.webp" alt="engagement photo">
-                    <img src="/images/gallery4.webp" alt="engagement photo">
-                    <img src="/images/gallery_r1 (4).webp" alt="engagement photo">
-                    <img src="/images/gallery6.webp" alt="engagement photo">
-                    <img src="/images/gallery7.webp" alt="engagement photo1">
-                    <img src="/images/gallery8.webp" alt="engagement photo">
-                    <img src="/images/gallery9.webp" alt="engagement photo">
-                    <img src="/images/gallery10.webp" alt="engagement photo">
-                    <img src="/images/gallery11.webp" alt="engagement photo">
-                    <img src="/images/gallery_r1 (9).webp" alt="engagement photo">
-                </div>
-                <div class="photo-gallery-box">
-                    <img src="/images/gallery_r1 (2).webp" alt="engagement photo">
-                    <img src="/images/gallery_r1 (1).webp" alt="engagement photo">
-                    <img src="/images/gallery_r1 (3).webp" alt="engagement photo">
-                    <img src="/images/gallery5.webp" alt="engagement photo">
-                    <img src="/images/gallery_r1 (5).webp" alt="engagement photo">
-                    <img src="/images/gallery_r1 (6).webp" alt="engagement photo">
-                    <img src="/images/gallery_r1 (7).webp" alt="engagement photo">
-                    <img src="/images/gallery_r1 (8).webp" alt="engagement photo">
-                    <img src="/images/gallery12.webp" alt="engagement photo">
-                </div>
-            </div>
-        </div>
-    </div> -->
 
     <div class="countdown-area" id="countdown-area">
         <h2>婚禮倒數</h2>
@@ -200,22 +158,16 @@
             <p>秒</p>
         </div>
         <p id="lookforward">好久不見，不如婚禮見！</p>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <div class="">
+        <br><br><br><br><br><br>
+        <div>
             <span class="buttons" id="swap" onclick="showRSVP()">出席問卷填寫!</span>
         </div>
     </div>
 
     <footer>
-        <a href="javascript:void(0)" onclick="JumpTo('header')">TOP</a>
+        <a href="javascript:void(0)" onclick="JumpTo('celebrate-section')">TOP</a>
         <div>Let's celebrate on wedding !</div>
     </footer>
 
 </body>
-<script src="index.js"></script>
 </html>
