@@ -5,7 +5,7 @@ function JumpTo(id) {
 
 //
 function reveal(){
-    var reveals = document.querySelectorAll("#lookforward,.countdown-area-box>div,.video-area,.dresscode-box,.color-box,.timeline,.map,.traffic-guide,.invite-content,.invite-pic,.intro-content,.pic,.celebrate-section p,.celebrate-section h2")
+    var reveals = document.querySelectorAll("#lookforward,.countdown-area-box>div,.video-area,.dresscode-box,.color-box,.traffic,.traffic-content,.timeline,.map,.traffic-guide,.invite-content,.invite-pic,.intro-content,.pic,.celebrate-section p,.celebrate-section h2")
     for (var i = 0; i < reveals.length; i++){
         var windowHeight = window.innerHeight;
         var elementTop = reveals[i].getBoundingClientRect().top;

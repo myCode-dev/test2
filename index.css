@@ -536,7 +536,7 @@ p {
     transform: translateX(50px);
 }
 
-.traffic.active .traffic-content{
+.traffic.active .traffic-content.active{
     opacity: 1;
     transform: translateX(0);
     transition: 1s;
