@@ -98,7 +98,7 @@ p {
     white-space: nowrap;
     overflow: hidden;
     border-right: 2px solid white;
-    width: 31ch;
+    width: 35ch;
     /* font-family: 'Pacifico', cursive; */
     letter-spacing: 0.2em; /* Adjust letter-spacing to make characters closer */
     animation: typing 4s steps(28, end) forwards, blink-caret .75s step-end infinite;
@@ -110,7 +110,7 @@ p {
         color: transparent;
     }
     to { 
-        width: 31ch; 
+        width: 35ch; 
         color: white;
     }
 }
