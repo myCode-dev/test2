@@ -7,7 +7,8 @@ function JumpTo(id) {
 
 // 元素显现效果
 function reveal() {
-  var reveals = document.querySelectorAll("#lookforward, .countdown-area-box>div, .video-area, .dresscode-box, .color-box, .traffic, .traffic-content, .timeline, .map, .traffic-guide, .invite-content, .invite-pic, .intro-content, .pic, .celebrate-section p, .celebrate-section h2");
+  var reveals = document.querySelectorAll("#lookforward,.countdown-area-box>div,.video-area,.dresscode-box,.color-box,.timeline,.map,.traffic,.traffic-content,.traffic-guide,.invite-content,.invite-pic,.intro-content,.pic,.celebrate-section p,.celebrate-section h2")
+  console.log(reveals)
   for (var i = 0; i < reveals.length; i++) {
       var windowHeight = window.innerHeight;
       var elementTop = reveals[i].getBoundingClientRect().top;
@@ -67,7 +68,7 @@ var x = setInterval(function () {
   document.getElementById("mins").innerHTML = minutes;
   document.getElementById("secs").innerHTML = seconds;
 
-  document.getElementById("countdown").innerHTML = "距離婚禮還剩 " + days + " 天<br>" + hours + " 小時 " + minutes + " 分鐘 " + seconds + " 秒<br>期待與你們見面！";
+  // document.getElementById("countdown").innerHTML = "距離婚禮還剩 " + days + " 天<br>" + hours + " 小時 " + minutes + " 分鐘 " + seconds + " 秒<br>期待與你們見面！";
 
   if (distance < 0) {
       clearInterval(x);
