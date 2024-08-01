@@ -98,7 +98,7 @@ p {
     white-space: nowrap;
     overflow: hidden;
     border-right: 2px solid white;
-    width: 35ch;
+    width: 31ch;
     /* font-family: 'Pacifico', cursive; */
     letter-spacing: 0.2em; /* Adjust letter-spacing to make characters closer */
     animation: typing 4s steps(28, end) forwards, blink-caret .75s step-end infinite;
@@ -110,7 +110,7 @@ p {
         color: transparent;
     }
     to { 
-        width: 35ch; 
+        width: 31ch; 
         color: white;
     }
 }
@@ -761,12 +761,13 @@ p {
     margin: auto;
     position: relative;
     opacity: 0;
-    transition: 1s;
+    
 }
 
 .dresscode-box.active {
     opacity: 1;
     width: 320px;
+    transition: 1s;
 }
 
 .dresscode-img {
@@ -1118,16 +1119,16 @@ p {
     height: 400px;
     display: flex;
     gap: 1rem;
-    animation: slide 20s linear infinite;
+    animation: slide 30s linear infinite; /* 將動畫時間延長到30秒 */
 }
 
 @keyframes slide {
     0% {
-        translate: 0;
+        transform: translateX(0);
     }
 
     100% {
-        translate: calc(-100% - 1rem);
+        transform: translateX(calc(-100% - 1rem));
     }
 }
 

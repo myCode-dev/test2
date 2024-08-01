@@ -5,38 +5,6 @@ function JumpTo(id) {
   jumpto.scrollIntoView({ block: 'start', behavior: 'smooth' });
 }
 
-// 元素显现效果
-function reveal() {
-  var reveals = document.querySelectorAll("#lookforward,.countdown-area-box>div,.video-area,.dresscode-box,.color-box,.timeline,.map,.traffic,.traffic-content,.traffic-guide,.invite-content,.invite-pic,.intro-content,.celebrate-section p,.celebrate-section h2")
-  console.log(reveals)
-  for (var i = 0; i < reveals.length; i++) {
-      var windowHeight = window.innerHeight;
-      var elementTop = reveals[i].getBoundingClientRect().top;
-      var elementVisible = 150;
-      if (elementTop < windowHeight - elementVisible) {
-          reveals[i].classList.add("active");
-      } else {
-          reveals[i].classList.remove("active");
-      }
-  }
-}
-window.addEventListener("scroll", reveal);
-
-// 动画结束后滚动
-document.addEventListener('DOMContentLoaded', () => {
-  const celebrateText = document.querySelector('.celebrate-text');
-  celebrateText.addEventListener('animationend', (event) => {
-      if (event.animationName === 'typing') {
-          setTimeout(() => {
-              window.scrollTo({
-                  top: window.innerHeight, // 滚动到下一视窗高度
-                  behavior: 'smooth' // 平滑滚动
-              });
-          }, 2000); // 等待 3000 毫秒 (3 秒)
-      }
-  });
-});
-
 // 打开 Google 地图
 function openGoogleMap() {
   window.open('https://www.google.com/maps/place/台北市士林區凱旋路49號', '_blank');
@@ -81,4 +49,32 @@ var x = setInterval(function () {
 function showRSVP() {
   window.open('https://www.surveycake.com/s/08bAO', '_blank');
 }
+
+function throttle(fn, wait) {
+  let lastTime = 0;
+  return function(...args) {
+      const now = new Date().getTime();
+      if (now - lastTime >= wait) {
+          lastTime = now;
+          return fn(...args);
+      }
+  };
+}
+
+function reveal() {
+  var reveals = document.querySelectorAll("#lookforward,.countdown-area-box>div,.video-area,.dresscode-box,.color-box,.timeline,.map,.traffic,.traffic-content,.traffic-guide,.invite-content,.invite-pic,.intro-content,.celebrate-section p,.celebrate-section h2");
+  for (var i = 0; i < reveals.length; i++) {
+      var windowHeight = window.innerHeight;
+      var elementTop = reveals[i].getBoundingClientRect().top;
+      var elementVisible = 150;
+      if (elementTop < windowHeight - elementVisible) {
+          reveals[i].classList.add("active");
+      } else {
+          reveals[i].classList.remove("active");
+      }
+  }
+}
+
+window.addEventListener("scroll", throttle(reveal, 200));
+
 
