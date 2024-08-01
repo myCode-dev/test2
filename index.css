@@ -818,14 +818,12 @@ p {
 
 .dresscode-box h2{
     position: absolute;
-    top:-25px;
+    top:-80px;
     left: 50%;
     transform: translate(-50%,-50%);
     white-space: nowrap;
     z-index: 2;
 }
-
-
 
 #dresscode-content{
     background-color: rgb(165, 208, 234);
@@ -853,6 +851,10 @@ p {
     padding: 50px 40px;
     align-items: center;
     justify-content: center;
+}
+
+#dresscode-grid div:nth-child(2n) {
+    color: white;
 }
 
 .circle{
