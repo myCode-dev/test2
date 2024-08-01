@@ -66,7 +66,7 @@ function throttle(fn, wait) {
 
 // Reveal elements on scroll
 function reveal() {
-  const reveals = document.querySelectorAll("#lookforward,.countdown-area-box>div,.dresscode-box,.color-box,.timeline,.traffic,.traffic-content,.traffic-guide,.invite-content,.invite-pic,.intro-content,.celebrate-section p,.celebrate-section h2");
+  const reveals = document.querySelectorAll("#lookforward,.countdown-area-box>div,#dresscode,.timeline,.traffic,.traffic-content,.traffic-guide,.invite-content,.invite-pic,.intro-content,.celebrate-section p,.celebrate-section h2");
 
   reveals.forEach(element => {
     const windowHeight = window.innerHeight;
