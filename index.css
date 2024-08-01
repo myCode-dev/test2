@@ -759,15 +759,9 @@ p {
     position: relative;
     /* background-color: rgb(196, 197, 191); */
     overflow: hidden;
-    opacity: 0;
+    opacity: 1;
     margin: 100px 0;
 }
-
-#dresscode.active{
-    opacity: 1;
-    transition: 1s;
-}
-
 
 .dresscode-box{
     width: 320px;
