@@ -89,18 +89,16 @@ p {
 }
 
 .celebrate-text {
-    /* text-align: center; */
     font-size: 14px;
     font-family: 'Melodrama', 'Noto Serif TC', serif;
-    /* font-size: 32px; */
     font-weight: 600;
     color: transparent;
     white-space: nowrap;
     overflow: hidden;
     border-right: 2px solid white;
-    width: 31ch;
-    /* font-family: 'Pacifico', cursive; */
-    letter-spacing: 0.2em; /* Adjust letter-spacing to make characters closer */
+    width: 32ch;
+    min-width: 32ch; /* 調整寬度以適應整個文本 */
+    letter-spacing: 0.1em; /* Adjust letter-spacing to make characters closer */
     animation: typing 4s steps(28, end) forwards, blink-caret .75s step-end infinite;
 }
 
@@ -110,7 +108,7 @@ p {
         color: transparent;
     }
     to { 
-        width: 31ch; 
+        width: 32ch; 
         color: white;
     }
 }
