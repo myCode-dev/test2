@@ -628,7 +628,8 @@ p {
 .schedule{
     background-image: url('https://i.ibb.co/m983tPF/schedule.webp');
     background-size: cover;
-    background-position: 50% 70%; 
+    /* background-size: 105%; */
+    background-position: 50% 40%; 
     color: #fff;
     padding: 100px 0;
 }
@@ -749,71 +750,93 @@ p {
 }
 
 
-/* Dress Code */
-#dresscode {
-    padding: 280px 0 200px;
+#dresscode{
+    padding: 200px 0;
     position: relative;
+    /* background-color: rgb(196, 197, 191); */
     overflow: hidden;
 }
 
-.dresscode-box {
+
+.dresscode-box{
     width: 0px;
     margin: auto;
     position: relative;
     opacity: 0;
-    
-}
-
-.dresscode-box.active {
-    opacity: 1;
-    width: 320px;
     transition: 1s;
 }
 
-.dresscode-img {
+.dresscode-box.active{
+    opacity: 1;
+    width: 320px;
+}
+
+.dresscode-img{
     position: absolute;
-    width: 70%;
+    width: 80%;
     height: 120%;
-    background-image: url('https://i.ibb.co/7bQkvp8/dress-Code.webp');
+    background-image: url('dressCode.webp');
     background-repeat: no-repeat;
     background-size: cover;
     left: -55%;
     top: -10%;
 }
 
-.dresscode-img::after {
+.dresscode-img::after{
     content: '';
     position: absolute;
-    background-color: rgba(196, 197, 191, 0.6);
+    /* background-color: rgba(196, 197, 191,0.6); */
     width: 100%;
     height: 100%;
     top: 0;
     left: 0;
 }
 
+
+#dresscode-flower{
+    position: absolute;
+    bottom: 10px;
+    right: -32px;
+    pointer-events: none;
+    user-select:none;    
+    -webkit-user-select:none;
+    -moz-user-select:none;
+    -o-user-select:none;
+}
+
+#dresscode-flower1{
+    width: 15px;
+    transform: rotate(15deg);
+}
+
+#dresscode-flower2{
+    transform: rotate(40deg);
+    left: -8px;
+    bottom: -10px;
+    opacity: 0;
+}
+
 .dresscode-box h2{
     position: absolute;
-    top: -50%;
+    top:-25px;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    white-space: nowrap;
     z-index: 2;
-    text-align: center;
-    font-family: 'Melodrama', 'Noto Serif TC', serif;
-    font-size: 32px;
-    font-weight: 600;
 }
 
 
-#dresscode-content {
-    background-color: #CADBE9;
+
+#dresscode-content{
+    background-color: rgb(165, 208, 234);
     width: 90%;
+    height: 90%;
     margin: auto;
     white-space: nowrap;
     position: relative;
-    color: #fff;
-    font-family: 'Melodrama', 'Noto Serif TC', serif;
-    font-weight: 600;
 }
 
-#dresscode-content::after {
+#dresscode-content::after{
     position: absolute;
     content: '';
     border: 1px solid #fff;
@@ -823,7 +846,7 @@ p {
     left: 10px;
 }
 
-#dresscode-grid {
+#dresscode-grid{
     display: grid;
     grid-template-columns: auto auto;
     gap: 20px;
@@ -832,147 +855,27 @@ p {
     justify-content: center;
 }
 
-.circle {
+.circle{
     width: 60px;
     height: 60px;
     border-radius: 50%;
 }
 
-#circle1 {
+#circle1{
     background-color: rgb(244, 244, 243);
 }
 
-#circle2 {
+#circle2{
     background-color: rgb(226, 220, 214);
 }
 
-#circle3 {
+#circle3{
     background-color: rgb(68, 84, 106);
 }
 
-#circle4 {
+#circle4{
     background-color: rgb(64, 64, 64);
 }
-
-/* .dress-code{
-    position: relative;
-    padding: 0 0 100px 0;
-    margin-top: 150px;
-    background-color: rgb(165, 208, 234);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.color-box{
-    position: absolute;
-    display: grid;
-    grid-template-columns: auto auto;
-    top: -70px;
-
-}
-
-.color{
-    width: 80px;
-    height: 200px;
-    margin: 30px 40px;
-    display: flex;
-    justify-content: center;
-    position: relative;
-}
-
-.color>p{
-    position: absolute;
-    top: -10%;
-    right: 15%;
-    writing-mode: vertical-rl;
-    background-color: rgba(255, 255, 255, 1);
-    padding: 20px 2px 0 0;
-    line-height: 2;
-    height: 120px;
-}
-
-.color{
-    transform: translateY(-50px);
-    opacity: 0;
-}
-
-#color1{
-    background-color: #ededec;
-}
-#color2{
-    background-color: #dbd5cf;
-}
-#color3{
-    background-color: #353544;
-}
-#color4{
-    background-color: #2b2b2a;
-}
-
-
-.color-box.active .color{
-    transform: translateY(0);
-    opacity: 1;
-    transition: 2s;
-}
-
-
-.color-box.active #color2{
-    transition-delay: 0.5s;
-}
-.color-box.active #color3{
-    transition-delay: 1s;
-}
-.color-box.active #color4{
-    transition-delay: 1.5s;
-}
-
-.dress-code-title{
-    position: absolute;
-    width: 100%;
-    top: 40%;
-    transform: translateY(-50%);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    overflow: hidden;
-}
-
-.dress-code-title>h2{
-    font-family: 'Aboreto','Noto Serif TC',serif;
-    color: rgba(255, 255, 255, 0.2);
-    font-size: 15vw;
-    line-height: 2;
-    margin: 0;
-    text-indent: 0;
-    text-align: center;
-}
-
-.dress-code-title>h2>span{
-    display: block;
-}
-
-.dress-code>p{
-    display: inline;
-    color: rgb(255, 255, 255);
-    position: relative;
-    line-height: 1;
-    margin-top: 500px;
-    padding: 0 0 5px 0;
-    background: 
-    linear-gradient(to bottom, rgba(165, 208, 234, 0), rgba(165, 208, 234, 0)),
-    linear-gradient(to bottom, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8));
-    background-size: 100% 0.1em, 0 0.1em;
-    background-position: 100% 100%, 0 100%;
-    background-repeat: no-repeat;
-}
-
-.dress-code>p.active{
-    background-size: 0 0.1em, calc(100% - 7px) 0.1em;
-    transition: 2s;
-} */
-
 
 .photo-video {
     padding-top: 150px;
