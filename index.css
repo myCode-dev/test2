@@ -198,7 +198,7 @@ p {
     align-items: center;
     writing-mode: vertical-lr;
     text-orientation: upright;
-    margin: 0 0 90px 0;
+    margin: 90px 0;
 }
 
 .name-box>h2:last-of-type {
@@ -446,6 +446,7 @@ p {
 .invite-box>h2{
     position: absolute;
     top: -130px;
+    letter-spacing: 0.2em;
     /* font-family: 'Melodrama', 'Noto Serif TC', serif; */
     font-family: 'Aboreto', 'Noto Serif TC', serif;
     /* font-size: 3.2vh;
@@ -465,15 +466,18 @@ p {
     border: 1px solid #c9d6de;
     /* color: rgba(45, 45, 45,0); */
     color: rgba(165, 208, 234, 0);
-    font-size: 16px;
+    font-size: 12px;
+    
 }
 
 .invite-content.active{
     color: rgb(165, 208, 234);
     transition: 1s;
-    transition-delay: 0.2s;
-    font-size: 12px;
-    line-height: 28px;
+    transition-delay: 0.1s;
+    font-size: 15px;
+    line-height: 50px;
+    padding: 10px;
+    font-weight: 600;
 }
 
 .invite-pic, .invite-pic-hide{
@@ -633,7 +637,7 @@ p {
     /* background-size: 105%; */
     background-position: 50% 40%; 
     color: #fff;
-    padding: 100px 0;
+    padding: 100px 0 120px;
 }
 
 .schedule>h1{
@@ -643,6 +647,7 @@ p {
     /* font-size: 32px;
     font-weight: 600; */
     margin: 0;
+    letter-spacing: 0.2em;
 }
 
 .timeline{
@@ -755,7 +760,7 @@ p {
 
 
 #dresscode{
-    padding: 200px 0;
+    padding: 280px 0 195px;
     position: relative;
     /* background-color: rgb(196, 197, 191); */
     overflow: hidden;
@@ -828,6 +833,7 @@ p {
     white-space: nowrap;
     z-index: 2;
     font-family: 'Aboreto', 'Noto Serif TC', serif;
+    letter-spacing: 0.2em;
 }
 
 #dresscode-content{
@@ -885,7 +891,8 @@ p {
 }
 
 .photo-video {
-    padding-top: 150px;
+    padding-top: 30px;
+    padding-bottom: 150px;
 }
 
 .photo-video a:link,
@@ -919,6 +926,14 @@ p {
     color: rgb(229, 245, 255);
     background-color: rgb(165, 208, 234);
     position: relative;
+}
+
+.photo-video h2 {
+    font-family: 'Aboreto', 'Noto Serif TC', serif;
+    letter-spacing: 0.2em;
+    text-align: center;
+    position: relative;
+    top: -31px;
 }
 
 .photo-area,
